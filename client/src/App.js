@@ -21,7 +21,7 @@ var game = new Phaser.Game(game);
 
 function preload() {
   // Load in images and sprites
-  this.load.spritesheet('player_handgun', GFS, {
+  this.load.spritesheet('player_img', GFS, {
       frameWidth: 66,
       frameHeight: 60
   });
@@ -38,7 +38,7 @@ function create() {
 
   // Add background, player, and reticle sprites
   var background = this.add.image(800, 600, 'background');
-  var player = this.physics.add.sprite(800, 600, 'player_handgun');
+  var player = this.physics.add.sprite(800, 600, 'player_img');
   var reticle = this.physics.add.sprite(800, 700, 'target');
 
   // Set image/sprite properties
@@ -127,7 +127,7 @@ function create() {
 
 function update(time, delta) {
 
-  var player = this.physics.add.sprite(800, 600, 'player_handgun');
+  var player = this.physics.add.sprite(800, 600, 'player_img');
   var reticle = this.physics.add.sprite(800, 700, 'target');
 
   // Rotates player to face towards reticle
@@ -150,7 +150,7 @@ function update(time, delta) {
 
 function constrainReticle(reticle) {
 
-  var player = this.physics.add.sprite(800, 600, 'player_handgun');
+  var player = this.physics.add.sprite(800, 600, 'player_img');
 
 
   var distX = reticle.x - player.x; // X distance between player & reticle
