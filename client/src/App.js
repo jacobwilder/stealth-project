@@ -12,12 +12,7 @@ import crosshair from './components/crosshair.png';
 import floor from './components/floor.png';
 import bullet6 from './components/bullet6.png';
 
-
-
-
 var game = new Phaser.Game(game);
-
-
 
 function preload() {
   // Load in images and sprites
